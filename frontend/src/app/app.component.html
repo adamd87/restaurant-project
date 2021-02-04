@@ -1,0 +1,29 @@
+<div class="container">
+  <label class="position-relative">
+    <div *ngIf="loggedUser">
+      <button class="btn btn-primary" (click)="logout()">Log out</button>
+    </div>
+  </label>
+  <nav class="navbar navbar-light bg-light">
+    <a class="btn btn-group-vertical" routerLink="/main/stockroom">Stockroom</a>
+    <a class="btn btn-group-vertical" routerLink="/main/recipes">Recipes</a>
+    <a class="btn btn-group-vertical" routerLink="/main/menu">Menu</a>
+    <a class="btn btn-group-vertical" routerLink="/main/finances">Finance</a>
+    <a class="btn btn-group-vertical" routerLink="/main/staff">Staff</a>
+  </nav>
+  <div class="jumbotron">
+    <form (ngSubmit)="onLoginFormSubmit()" *ngIf="!loggedUser">
+      <div class="row">
+        <div class="col">
+          <input type="text" name="username" class="form-control" placeholder="username" [(ngModel)]="username">
+        </div>
+        <div class="col">
+          <input type="password" name="password" class="form-control" placeholder="password" [(ngModel)]="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log in</button>
+      </div>
+    </form>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
