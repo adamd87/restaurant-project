@@ -50,7 +50,6 @@ export class StockroomComponent implements OnInit {
           this.submitted = true;
           this.validationErrors = errorResponse.error;
         });
-
   }
 
   delete(id?: number): void {

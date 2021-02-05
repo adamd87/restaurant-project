@@ -27,8 +27,8 @@ public class MenuController {
     }
 
     @PostMapping
-    public Menu addNewMenuItem(@RequestBody Menu dish){
-        return menuRepository.save(dish);
+    public Menu addNewMenuItem(@RequestBody Menu menuItem){
+        return menuRepository.save(menuItem);
     }
 
 }
