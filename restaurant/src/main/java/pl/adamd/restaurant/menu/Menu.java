@@ -14,13 +14,13 @@ public class Menu {
     private Long id;
     private String name;
     @ManyToMany
-    private List<Product> products;
+    private List<Product> productList;
     private BigDecimal price;
 
-    public Menu(Long id, String name, List<Product> products, BigDecimal price) {
+    public Menu(Long id, String name, List<Product> productList, BigDecimal price) {
         this.id = id;
         this.name = name;
-        this.products = products;
+        this.productList = productList;
         this.price = price;
     }
 
@@ -35,8 +35,8 @@ public class Menu {
         return name;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Product> getProductList() {
+        return productList;
     }
 
     public BigDecimal getPrice() {
@@ -51,8 +51,8 @@ public class Menu {
         this.name = name;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProducts(List<Product> productList) {
+        this.productList = productList;
     }
 
     public void setPrice(BigDecimal price) {
@@ -64,7 +64,7 @@ public class Menu {
         return "Menu{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", products=" + products +
+                ", productList=" + productList +
                 ", price=" + price +
                 '}';
     }

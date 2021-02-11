@@ -1,6 +1,7 @@
 package pl.adamd.restaurant.menu;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import pl.adamd.restaurant.products.Product;
 
 import java.util.List;
 
