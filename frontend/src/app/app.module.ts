@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {StockroomComponent} from './stockroom/stockroom.component';
 import {Router, RouterModule, Routes} from '@angular/router';
@@ -21,19 +21,19 @@ const routes: Routes = [{
   path: 'main',
   component: MainComponent
 }, {
-  path: 'main/stockroom',
+  path: 'stockroom',
   component: StockroomComponent
 }, {
-  path: 'main/recipes',
+  path: 'recipes',
   component: RecipesComponent
 }, {
-  path: 'main/menu',
+  path: 'menu',
   component: MenuComponent
 }, {
-  path: 'main/finances',
+  path: 'finances',
   component: FinancesComponent
 }, {
-  path: 'main/staff',
+  path: 'staff',
   component: StaffComponent
 }];
 
@@ -52,7 +52,8 @@ const routes: Routes = [{
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
 
   providers: [{

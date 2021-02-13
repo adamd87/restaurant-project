@@ -1,23 +1,35 @@
-<!--<button class="btn btn-group">-->
-<!--  <input type="submit" class="btn btn-outline-primary" value="Add new" (click)="createProduct()">-->
-<!--</button>-->
 <div class="container">
-  <button type="button" class="btn btn-outline-primary" (click)="loadMenu()">Get all</button>
-  <table class="table">
-    <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Price</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let menu of menuItems">
-      <td>{{menu.id}}</td>
-      <td>{{menu.name}}</td>
-      <td>{{menu.price}}</td>
-      <!--    <td><button type="button" class="btn btn-outline-primary" (click)="delete(product.id)">X</button></td>-->
-    </tr>
-    </tbody>
-  </table>
+  <form>
+    <label for="name"></label>
+    <input type="text"
+           class="form-control"
+           id="name"
+           name="name"
+           [(ngModel)]="newMenuItem.name">
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="getMenuItem(newMenuItem.name)">Find
+    </button>
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="loadMenu()">Get all
+    </button>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Order</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let menu of menuItems">
+        <td>{{menu.id}}</td>
+        <td>{{menu.name}}</td>
+        <td>{{menu.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
 </div>

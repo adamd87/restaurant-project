@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   private login(errorCallback?: () => void): void {
     this.httpClient.post<LoggedUser>('http://localhost:8080/login', {})
       .subscribe(loggedUser => {
-          this.router.navigate(['main/stockroom']);
+          this.router.navigate(['']);
           this.loggedUser = loggedUser;
         },
         () => {
