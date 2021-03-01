@@ -13,6 +13,7 @@ import {RecipesComponent} from './recipes/recipes.component';
 import {StaffComponent} from './staff/staff.component';
 import {FinancesComponent} from './finances/finances.component';
 import { MenuComponent } from './menu/menu.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [{
   path: '',
@@ -46,7 +47,8 @@ const routes: Routes = [{
     RecipesComponent,
     StaffComponent,
     FinancesComponent,
-    MenuComponent
+    MenuComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

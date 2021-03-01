@@ -1,43 +1,39 @@
-<div class="jumbotron">
-  <h1>Welcome in my restaurant!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@1,100&family=RocknRoll+One&family=UnifrakturCook:wght@700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+<h1 id="welcome">Welcome in my restaurant!</h1>
+<div class="col-md-auto" *ngIf="loggedUser">
+  <ul>
+    <li><a routerLink="/stockroom">Stockroom</a></li>
+    <li><a routerLink="/recipes">Recipes</a></li>
+    <li><a routerLink="/menu">Menu</a></li>
+    <li><a routerLink="/finances">Finances</a></li>
+    <li><a routerLink="/staff">Staff</a></li>
+    <li><a id="logout" class="button" (click)="logout()">Logout</a></li>
+  </ul>
 </div>
-<div *ngIf="loggedUser">
-  <div class="btn-group justify-content-md-end fixed-top">
-    <div class="btn-group">
-      <button class="btn btn-primary" routerLink="/stockroom">Stockroom</button>
-    </div>
-    <div class="btn-group">
-      <button class="btn btn-primary" routerLink="/recipes">Recipes</button>
-    </div>
-    <div class="btn-group">
-      <button class="btn btn-primary" routerLink="/menu">Menu</button>
-    </div>
-    <div class="btn-group">
-      <button class="btn btn-primary" routerLink="/finances">Finance</button>
-    </div>
-    <div class="btn-group">
-      <button class="btn btn-primary" routerLink="/staff">Staff</button>
-    </div>
-    <div class="btn-group">
-      <button class="btn btn-danger" (click)="logout()">Log out</button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
+      <form (ngSubmit)="onLoginFormSubmit()" *ngIf="!loggedUser" class="box">
+        <h1>Login</h1>
+        <input type="text" name="username" placeholder="username" [(ngModel)]="username">
+        <input type="text" name="password" placeholder="password" [(ngModel)]="password">
+        <input type="submit" name="login" value="Login">
+      </form>
     </div>
   </div>
 </div>
-<div class="container-md">
-  <form (ngSubmit)="onLoginFormSubmit()" *ngIf="!loggedUser" class="col-md-auto">
-    <div class="row">
-      <div class="col">
-        <input type="text" name="username" class="form-control" placeholder="username" [(ngModel)]="username">
-      </div>
-      <div class="col">
-        <input type="password" name="password" class="form-control" placeholder="password" [(ngModel)]="password">
-      </div>
-      <button class="btn btn-primary" type="submit">Log in</button>
-    </div>
-  </form>
-</div>
 <router-outlet></router-outlet>
-
+</body>
+</html>
 
 
 

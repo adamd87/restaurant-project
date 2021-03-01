@@ -1,0 +1,77 @@
+
+#welcome{
+  background-color: blueviolet;
+  color: whitesmoke;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  height: 100px;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: -8px;
+  overflow: hidden;
+  width: max-content;
+  background-color: blueviolet;
+  position: fixed;
+  left: 0px;
+}
+li a{
+  float: bottom;
+  display: block;
+  color: whitesmoke;
+  padding: 15px 10px;
+  text-align: right;
+  text-decoration: none;
+  min-width: 65px;
+  font-family: 'RocknRoll One', sans-serif;
+}
+.fa-sign-out-alt{
+  color: white;
+}
+li a:hover{
+  background-color: cornflowerblue;
+}
+.box{
+  width: 500px;
+  padding: 40px;
+  position: center;
+
+  background: blueviolet;
+  text-align: center;
+  transition: 0.25s;
+  margin-top: 125px;
+}
+
+.box h1 {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-family: 'RocknRoll One', sans-serif;
+}
+.box input[type="text"],
+.box input[type="password"]{
+  width: 200px;
+  border-color: white;
+}
+.box input[type="submit"]{
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid white;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-family: 'RocknRoll One' ,sans-serif;
+}
+.text-muted{
+  color: white;
+}
+
+

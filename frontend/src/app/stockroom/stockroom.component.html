@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
 <div class="container">
   <form>
     <div class="form-group">
@@ -17,7 +21,8 @@
              [(ngModel)]="newProduct.weight"
              [class.is-invalid]="submitted && validationErrors.weight"
              [class.is-valid]="submitted && !validationErrors.weight">
-      <button type="button" class="btn btn-outline-primary" (click)="updateProduct(newProduct.name)">Increase by</button>
+      <button type="button" class="btn btn-outline-primary" (click)="updateProduct(newProduct.name)">Increase by
+      </button>
       <div class="invalid-feedback" *ngFor="let error of validationErrors.weight">
         {{error}}
       </div>
@@ -28,7 +33,8 @@
              [(ngModel)]="newProduct.cost"
              [class.is-invalid]="submitted && validationErrors.cost"
              [class.is-valid]="submitted && !validationErrors.cost">
-      <button type="button" class="btn btn-outline-primary" (click)="updateProduct(newProduct.name)">Change value</button>
+      <button type="button" class="btn btn-outline-primary" (click)="updateProduct(newProduct.name)">Change value
+      </button>
       <div class="invalid-feedback" *ngFor="let error of validationErrors.cost">
         {{error}}
       </div>
@@ -53,9 +59,14 @@
         <td>{{product.name}}</td>
         <td>{{product.weight}}</td>
         <td>{{product.cost}}</td>
-        <td><button type="button" class="btn btn-outline-primary" (click)="delete(product.id)">X</button></td>
+        <td>
+          <button type="button" class="btn btn-outline-primary" (click)="delete(product.id)">X</button>
+        </td>
       </tr>
       </tbody>
     </table>
   </form>
 </div>
+</body>
+</html>
+
