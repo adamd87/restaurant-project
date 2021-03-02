@@ -3,9 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@1,100&family=RocknRoll+One&family=UnifrakturCook:wght@700&display=swap"
         rel="stylesheet">
-
 </head>
-
 <body>
 <h1 id="welcome">Welcome in my restaurant!</h1>
 <div class="col-md-auto" *ngIf="loggedUser">
@@ -21,7 +19,6 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-
       <form (ngSubmit)="onLoginFormSubmit()" *ngIf="!loggedUser" class="box">
         <h1>Login</h1>
         <input type="text" name="username" placeholder="username" [(ngModel)]="username">

@@ -1,0 +1,28 @@
+.stock-form{
+  padding-left: 65px;
+}
+.stock-form ul li input[type="text"],
+.stock-form ul li input[type="number"]{
+  width: 50%;
+  margin: 15px;
+}
+.invalid-feedback{
+  margin: 10px;
+}
+.stock-form table{
+  margin: 50px;
+  width: 75%;
+}
+.stock-form ul li input[type="button"]{
+  background-color: blueviolet;
+  color: whitesmoke;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: 'RocknRoll One' ,sans-serif;
+  margin: 5px;
+}
+
+.stock-form ul li input[type="button"]:hover{
+  background-color: cornflowerblue;
+}

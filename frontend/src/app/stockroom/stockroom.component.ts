@@ -6,7 +6,8 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-stockroom',
-  templateUrl: './stockroom.component.html'
+  templateUrl: './stockroom.component.html',
+  styleUrls: ['./stockroom.component.css']
 })
 export class StockroomComponent implements OnInit {
 
